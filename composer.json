@@ -1,4 +1,5 @@
 {
+    "name": "innoractive/telegram-notifier",
     "require": {
         "longman/telegram-bot": "^0.21.0",
         "vlucas/phpdotenv": "^3.3"
@@ -11,6 +12,6 @@
     "scripts": {
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
-        ],
+        ]
     }
 }
