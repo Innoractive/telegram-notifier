@@ -1,0 +1,6 @@
+{
+    "require": {
+        "longman/telegram-bot": "^0.21.0",
+        "vlucas/phpdotenv": "^3.3"
+    }
+}
