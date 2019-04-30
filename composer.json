@@ -7,5 +7,10 @@
         "files": [
             "includes/config.php"
         ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ],
     }
 }
