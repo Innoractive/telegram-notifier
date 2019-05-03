@@ -2,16 +2,12 @@
 // Load composer
 require __DIR__ . '/vendor/autoload.php';
 
-$botApiKey = getenv('TELEGRAM_API');
-$botName   = getenv('TELEGRAM_BOTNAME');
-$hookUrl   = getenv('TELEGRAM_WEBHOOK_URL');
-
 try {
     // Create Telegram API object
-    $telegram = new Longman\TelegramBot\Telegram($botApiKey, $botName);
+    $telegram = new Longman\TelegramBot\Telegram(getenv('TELEGRAM_API'), getenv('TELEGRAM_BOTNAME'));
 
     // Set webhook
-    $result = $telegram->setWebhook($hookUrl);
+    $result = $telegram->setWebhook(getenv('TELEGRAM_WEBHOOK_URL'));
 	
     if ($result->isOk()) {
         echo $result->getDescription();
