@@ -12,5 +12,11 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 
 - update telegram credential in `.env` file
 
-- run `intall.php` to register
- telegram webhook 
+- run `php install.php` to register
+ telegram webhook
+
+- open telegram app
+
+- add your telegram bot into telegram group
+
+- run telegram command `/getChatId` to get chat id
