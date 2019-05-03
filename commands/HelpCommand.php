@@ -10,7 +10,8 @@
 
 namespace Longman\TelegramBot\Commands\UserCommands;
 
-use Longman\TelegramBot\Command;
+use Longman\TelegramBot\Commands\Command;
+use Longman\TelegramBot\Commands\UserCommand;
 use Longman\TelegramBot\Request;
 
 /**
@@ -18,7 +19,7 @@ use Longman\TelegramBot\Request;
  *
  * Command that lists all available commands and displays them in User and Admin sections.
  */
-class HelpCommand extends Command
+class HelpCommand extends UserCommand
 {
     /**
      * @var string

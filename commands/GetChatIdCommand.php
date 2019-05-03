@@ -9,14 +9,14 @@
  */
 namespace Longman\TelegramBot\Commands\UserCommands;
 
-use Longman\TelegramBot\Command;
+use Longman\TelegramBot\Commands\UserCommand;
 use Longman\TelegramBot\Request;
 /**
  * User "/shortener" command
  *
  * Create a shortened URL using Botan.
  */
-class GetChatIdCommand extends Command
+class GetChatIdCommand extends UserCommand
 {
     /**
      * @var string

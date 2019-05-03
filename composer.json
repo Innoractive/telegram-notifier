@@ -1,7 +1,7 @@
 {
     "name": "innoractive/telegram-notifier",
     "require": {
-        "longman/telegram-bot": "^0.21.0",
+        "longman/telegram-bot": "*",
         "vlucas/phpdotenv": "^3.3"
     },
     "autoload": {

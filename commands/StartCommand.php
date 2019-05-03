@@ -10,7 +10,7 @@
 
 namespace Longman\TelegramBot\Commands\SystemCommands;
 
-use Longman\TelegramBot\Command;
+use Longman\TelegramBot\Commands\SystemCommand;
 use Longman\TelegramBot\Request;
 
 /**
@@ -18,7 +18,7 @@ use Longman\TelegramBot\Request;
  *
  * Gets executed when a user first starts using the bot.
  */
-class StartCommand extends Command
+class StartCommand extends SystemCommand
 {
     /**
      * @var string
