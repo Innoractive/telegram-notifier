@@ -50,12 +50,13 @@ class GetChatIdCommand extends UserCommand
             '<b>Chat Id</b>: %s' . PHP_EOL
             .'<b>User Id</b>: %s' . PHP_EOL
             .'<b>Message</b>: %s' . PHP_EOL,
-            $chat_id, $user_id, $message
+            $chat_id, $user_id, $message->getText()
         );
 
         $data = [
             'chat_id' => $chat_id,
             'text'    => $text,
+            'parse_mode' => 'HTML',
         ];
 
         return Request::sendMessage($data);
