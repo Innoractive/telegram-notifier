@@ -47,9 +47,9 @@ class GetChatIdCommand extends UserCommand
         $user_id = $message->getFrom()->getId();
 
         $text = sprintf(
-            '<b>Chat Id</b>: %s' . PHP_EOL
-            .'<b>User Id</b>: %s' . PHP_EOL
-            .'<b>Message</b>: %s' . PHP_EOL,
+            '<b>Chat Id</b>: <code>%s</code>' . PHP_EOL
+            .'<b>User Id</b>: <code>%s</code>' . PHP_EOL
+            .'<b>Message</b>: <code>%s</code>' . PHP_EOL,
             $chat_id, $user_id, $message->getText()
         );
 
