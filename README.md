@@ -25,4 +25,4 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 - run telegram command `/getChatId` to get chat id
 
 ### Setup mailhook
-- forward email to 
+- forward email to `http://path.to/forward.php`
