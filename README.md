@@ -15,8 +15,14 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 - run `php install.php` to register
  telegram webhook
 
+
+## Usage
+### Get chat Id
 - open telegram app
 
 - add your telegram bot into telegram group
 
 - run telegram command `/getChatId` to get chat id
+
+### Setup mailhook
+- forward email to 
