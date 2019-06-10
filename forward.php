@@ -7,6 +7,8 @@ require __DIR__ . '/vendor/autoload.php';
 if(isset($_POST['recipient'])) {
     list($to, $domail) = explode('@', trim($_POST['recipient'], '<>'));
 
+    $telegram = new Longman\TelegramBot\Telegram(getenv('TELEGRAM_API'), getenv('TELEGRAM_BOTNAME'));
+
     $message = sprintf('<b>Title:</b><br>%s<br><b>Message</b><br>%s', $_POST['subject'], $_POST['stripped-text']);
 
     \Longman\TelegramBot\Request::sendMessage([
