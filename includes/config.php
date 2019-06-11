@@ -37,3 +37,7 @@ function bold_text($text) {
 function remove_arrow($text) {
     return str_replace(['<','>'], '', $text);
 }
+
+function asset($url) {
+    return './assets/' . $url;
+}
