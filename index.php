@@ -21,7 +21,7 @@ require __DIR__ . '/vendor/autoload.php';
     <header>
         <div class="container">
             <div class="nav-brand">
-                <a href="https://nostalgic-css.github.io/NES.css/">
+                <a href="<?php echo bot_url();?>" target="_blank" rel="noopener" title="Link to Telegram">
                     <h1><i class="snes-jp-logo brand-logo"></i><?php echo getenv('TELEGRAM_BOTNAME');?></h1>
                 </a>
                 <p>Telegram Notifier for Innoractive.com.</p>
@@ -36,7 +36,7 @@ require __DIR__ . '/vendor/autoload.php';
             </section>
         </main>
         <footer>
-            <p><span>©2018</span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <a href="https://t.me/<?php echo trim(getenv('TELEGRAM_BOTNAME'), '@');?>" target="_blank" rel="noopener"><?php echo getenv('TELEGRAM_BOTNAME');?></a></p>
+            <p><span>©2018</span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <a href="<?php echo bot_url();?>" target="_blank" rel="noopener"><?php echo getenv('TELEGRAM_BOTNAME');?></a></p>
         </footer>
     </div>
 </body>
