@@ -29,3 +29,11 @@ function contains($str, array $arr) {
     }
     return false;
 }
+
+function bold_text($text) {
+    return preg_replace("#\*{1}([^ \t\r\n][^\t\r\n]*)\*{1}#", '<b>$1</b>', $text);
+}
+
+function remove_arrow($text) {
+    return str_replace(['<','>'], '', $text);
+}
