@@ -87,8 +87,8 @@ require __DIR__ . '/vendor/autoload.php';
                         <div id="inputs" class="item">
                             <div class="nes-field">
                                 <label for="name_field"><?php echo bot_name(); ?> Email</label>
-                                <button type="button" id="copy-btn" class="nes-btn is-primary" style="float:right;width:15%">Copy</button>
-                                <input type="text" id="telegram-email" class="nes-input" placeholder="543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?>" readonly style="float:left; width: 80%">
+                                <button type="button" id="copy-btn" class="nes-btn is-primary">Copy</button>
+                                <input type="text" id="telegram-email" class="nes-input" placeholder="543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?>" readonly>
                             </div>
                             <div style="clear:both"></div>
                         </div>
@@ -105,13 +105,13 @@ require __DIR__ . '/vendor/autoload.php';
                 <p>
                     <i class="nes-icon github is-small"></i>
                     <a href="https://github.com/Innoractive/telegram-notifier" target="_blank" rel="noopener">
-                        /Innoractive/telegram-notifier
+                        <span class="show-large">/Innoractive</span>/telegram-notifier
                     </a>
                 </p>
             </section>
         </main>
         <footer>
-            <p><span>© <?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
+            <p><span class="footer-year">© <?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
         </footer>
 
         <button type="button" class="nes-btn is-error scroll-btn" id="fab-btn" onclick="window.scrollTo({ top:0, behavior: 'smooth' })"><span>&lt;</span></button>

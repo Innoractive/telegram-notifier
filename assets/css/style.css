@@ -287,6 +287,16 @@ img.lazy {
   background-color: #D3D3D3;
 }
 
+#copy-btn{
+  float:right;
+  width:15%
+}
+
+#telegram-email{
+  float:left;
+  width: 80%;
+}
+
 @media screen and (max-width: calc(980px - 4rem)) {
   header > .container {
     margin: 0 4rem;
@@ -339,4 +349,31 @@ img.lazy {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+
+@media screen and (max-width: 650px) {
+  #balloons .nes-bcrikko{
+    display:none;
+  }
+  .message-list > .message > .nes-balloon{
+    max-width: 85%;
+  }
+  .nav-brand h1{
+    font-size: 22px;
+  }
+  #copy-btn{
+    width: 30%;
+  }
+
+  #telegram-email{
+    width: 60%;
+  }
+
+  .show-large{
+    display:none;
+  }
+
+  .footer-year{
+    display:block;
+  }
 }
