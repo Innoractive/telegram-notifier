@@ -6,7 +6,8 @@
     },
     "autoload": {
         "files": [
-            "includes/config.php"
+            "includes/config.php",
+            "includes/helpers/autoload.php"
         ]
     },
     "scripts": {
