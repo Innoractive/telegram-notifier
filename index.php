@@ -82,7 +82,7 @@ require __DIR__ . '/vendor/autoload.php';
                         </div>
                     </section>
 
-                    <section class="nes-container with-title">
+                    <section class="nes-container with-title" id="email-block" style="display:none">
                         <h3 class="title">4. This is your <?php echo bot_link();?> email</h3>
                         <div id="inputs" class="item">
                             <div class="nes-field">

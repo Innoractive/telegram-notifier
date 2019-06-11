@@ -41,8 +41,10 @@ $(document).ready(function() {
     if($(this).val() != '') {
       $('#chat-id').removeClass('is-error');
       $('#telegram-email').val($(this).val() + mail_domain);
+      $('#email-block').show();
     } else {
       $('#telegram-email').val('');
+      $('#email-block').hide();
     }
   });
   $('#copy-btn').click(copytext);
