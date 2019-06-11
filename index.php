@@ -27,7 +27,7 @@ require __DIR__ . '/vendor/autoload.php';
                 <a href="<?php echo bot_url();?>" target="_blank" rel="noopener" title="Link to Telegram">
                     <h1><i class="snes-jp-logo brand-logo"></i><?php echo bot_name();?></h1>
                 </a>
-                <p>Telegram Notifier for Innoractive.com.</p>
+                <p>Telegram Notifier for Innoractive.com</p>
             </div>
         </div>
     </header>
@@ -43,11 +43,11 @@ require __DIR__ . '/vendor/autoload.php';
 
                 <section class="item">
                     <section class="nes-container">
-                        <p>1. Add <?php echo bot_link();?> To Telegram Group</p>
+                        <p>1. Add <?php echo bot_link();?> To Your Telegram Group</p>
                     </section>
 
                     <section class="nes-container with-title">
-                        <h3 class="title">2. Go To Telegram Group</h3>
+                        <h3 class="title">2. Go To Your Telegram Group</h3>
                         <div id="balloons" class="item">
                             <section class="message-list">
                                 <section class="message -right">
