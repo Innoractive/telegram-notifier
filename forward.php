@@ -13,7 +13,11 @@ if(isset($_POST['recipient'])) {
         file_put_contents('debug.log', print_r($_POST, true), FILE_APPEND);
     }
 
-    $message = sprintf(file_get_contents('view/telegram-template.html'), getIcon($_POST['subject'] . ' ' . $_POST['stripped-text']), $_POST['subject'], $_POST['stripped-text']);
+    $message = sprintf(file_get_contents('view/telegram-template.html'),
+        getIcon($_POST['subject'] . ' ' . $_POST['stripped-text']),
+        $_POST['subject'],
+        $_POST['stripped-text'],
+        str_replace(['<','>'], '', $_POST['from']));
 
     $response = \Longman\TelegramBot\Request::sendMessage([
         'chat_id' => $to,
