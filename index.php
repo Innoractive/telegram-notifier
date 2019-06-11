@@ -12,7 +12,7 @@ require __DIR__ . '/vendor/autoload.php';
     <meta name="theme-color" content="#212529"/>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title><?php echo getenv('TELEGRAM_BOTNAME');?> | Telegram Notifier for Innoractive.com</title>
-    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+    <link href="<?php echo asset('css/nes.css'); ?>" rel="stylesheet" />
     <link href="<?php echo asset('css/style.css'); ?>" rel="stylesheet" />
     <script src="<?php echo asset('js/dialog-polyfill.js'); ?>"></script>
     <script src="<?php echo asset('js/script.js'); ?>"></script>
