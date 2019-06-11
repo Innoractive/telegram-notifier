@@ -34,9 +34,63 @@ require __DIR__ . '/vendor/autoload.php';
                 <h2 id="about"><a href="#about">#</a>About</h2>
                 <p><?php echo getenv('TELEGRAM_BOTNAME');?> is a TelegramBot to convert your email into telegram message.</p>
             </section>
+
+            <section class="topic">
+                <h2 id="installation"><a href="#installation">#</a>How To Use</h2>
+
+                <section class="item">
+                    <section class="nes-container">
+                        <p>1. Add <?php echo getenv('TELEGRAM_BOTNAME');?> To Telegram Group</p>
+                    </section>
+
+                    <section class="nes-container with-title">
+                        <h3 class="title">2. Go To Telegram Group</h3>
+                        <div id="balloons" class="item">
+                            <section class="message-list">
+                                <section class="message -right">
+                                    <!-- Balloon -->
+                                    <div class="nes-balloon from-right">
+                                        <p>/getChatId </p>
+                                    </div>
+                                    <i class="nes-bcrikko"></i>
+                                </section>
+                                <section class="message -left">
+                                    <i class="nes-bcrikko"></i>
+                                    <!-- Balloon -->
+                                    <div class="nes-balloon from-left">
+                                        <p>Chat Id: 543XXXX80</p>
+                                        <p>User Id: 543XXXX80</p>
+                                        <p>Message: /getChatId</p>
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </section>
+
+                    <section class="nes-container with-title">
+                        <h3 class="title">3. Type Your Chat ID</h3>
+                        <div id="inputs" class="item">
+                            <div class="nes-field">
+                                <label for="name_field">Your Chat ID</label>
+                                <input type="text" id="name_field" class="nes-input" placeholder="eg. 543XXXX80">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="nes-container with-title">
+                        <h3 class="title">4. This is your <?php echo getenv('TELEGRAM_BOTNAME');?> email</h3>
+                        <div id="inputs" class="item">
+                            <div class="nes-field">
+                                <label for="name_field">Email</label>
+                                <input type="text" id="telegram-email" class="nes-input" placeholder="543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?>" readonly >
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
         </main>
         <footer>
-            <p><span>©2018</span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <a href="<?php echo bot_url();?>" target="_blank" rel="noopener"><?php echo getenv('TELEGRAM_BOTNAME');?></a></p>
+            <p><span>©<?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <a href="<?php echo bot_url();?>" target="_blank" rel="noopener"><?php echo getenv('TELEGRAM_BOTNAME');?></a></p>
         </footer>
     </div>
 </body>
