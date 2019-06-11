@@ -99,9 +99,19 @@ require __DIR__ . '/vendor/autoload.php';
                     </section>
                 </section>
             </section>
+
+            <section class="topic">
+                <h2 id="setup"><a href="#setup">#</a>Setup your own?</h2>
+                <p>
+                    <i class="nes-icon github is-small"></i>
+                    <a href="https://github.com/Innoractive/telegram-notifier" target="_blank" rel="noopener">
+                        /Innoractive/telegram-notifier
+                    </a>
+                </p>
+            </section>
         </main>
         <footer>
-            <p><span>©<?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
+            <p><span>© <?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
         </footer>
 
         <button type="button" class="nes-btn is-error scroll-btn" id="fab-btn" onclick="window.scrollTo({ top:0, behavior: 'smooth' })"><span>&lt;</span></button>
