@@ -27,8 +27,10 @@ if(isset($_POST['recipient'])) {
     ]);
 
     if(!$response->isOk()) {
-        echo 'error!';
-        echo '<br>'.$message;
+        if($_SERVER['SERVER_NAME'] == 'localhost'){
+            echo 'error!';
+            echo '<br>'.$message;
+        }
         file_put_contents('error.log', sprintf('[%s]: %s' . PHP_EOL, date('Y-m-d H:i:s'), print_r(array($_POST, $response), true)), FILE_APPEND);
     }
 }
