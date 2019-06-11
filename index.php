@@ -27,7 +27,7 @@ require __DIR__ . '/vendor/autoload.php';
                 <a href="<?php echo bot_url();?>" target="_blank" rel="noopener" title="Link to Telegram">
                     <h1 class="typewriter"><i class="snes-jp-logo brand-logo"></i><?php echo bot_name();?></h1>
                 </a>
-                <p>Telegram Notifier for Innoractive.com</p>
+                <p>Telegram Notifier for <a  href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive.com</a></p>
             </div>
         </div>
     </header>
