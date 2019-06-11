@@ -11,7 +11,7 @@ require __DIR__ . '/vendor/autoload.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#212529"/>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <title><?php echo getenv('TELEGRAM_BOTNAME');?> | Telegram Notifier for Innoractive.com</title>
+    <title><?php echo bot_name();?> | Telegram Notifier for Innoractive.com</title>
     <link href="<?php echo asset('css/nes.css'); ?>" rel="stylesheet" />
     <link href="<?php echo asset('css/style.css'); ?>" rel="stylesheet" />
     <script src="<?php echo asset('js/dialog-polyfill.js'); ?>"></script>
@@ -22,7 +22,7 @@ require __DIR__ . '/vendor/autoload.php';
         <div class="container">
             <div class="nav-brand">
                 <a href="<?php echo bot_url();?>" target="_blank" rel="noopener" title="Link to Telegram">
-                    <h1><i class="snes-jp-logo brand-logo"></i><?php echo getenv('TELEGRAM_BOTNAME');?></h1>
+                    <h1><i class="snes-jp-logo brand-logo"></i><?php echo bot_name();?></h1>
                 </a>
                 <p>Telegram Notifier for Innoractive.com.</p>
             </div>
@@ -32,7 +32,7 @@ require __DIR__ . '/vendor/autoload.php';
         <main class="main-content">
             <section class="topic">
                 <h2 id="about"><a href="#about">#</a>About</h2>
-                <p><?php echo getenv('TELEGRAM_BOTNAME');?> is a TelegramBot to convert your email into telegram message.</p>
+                <p><?php echo bot_link();?> is a TelegramBot to convert your email into telegram message.</p>
             </section>
 
             <section class="topic">
@@ -40,7 +40,7 @@ require __DIR__ . '/vendor/autoload.php';
 
                 <section class="item">
                     <section class="nes-container">
-                        <p>1. Add <?php echo getenv('TELEGRAM_BOTNAME');?> To Telegram Group</p>
+                        <p>1. Add <?php echo bot_link();?> To Telegram Group</p>
                     </section>
 
                     <section class="nes-container with-title">
@@ -78,10 +78,10 @@ require __DIR__ . '/vendor/autoload.php';
                     </section>
 
                     <section class="nes-container with-title">
-                        <h3 class="title">4. This is your <?php echo getenv('TELEGRAM_BOTNAME');?> email</h3>
+                        <h3 class="title">4. This is your <?php echo bot_link();?> email</h3>
                         <div id="inputs" class="item">
                             <div class="nes-field">
-                                <label for="name_field">Email</label>
+                                <label for="name_field"><?php echo bot_name(); ?> Email</label>
                                 <input type="text" id="telegram-email" class="nes-input" placeholder="543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?>" readonly >
                             </div>
                         </div>
@@ -90,7 +90,7 @@ require __DIR__ . '/vendor/autoload.php';
             </section>
         </main>
         <footer>
-            <p><span>©<?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <a href="<?php echo bot_url();?>" target="_blank" rel="noopener"><?php echo getenv('TELEGRAM_BOTNAME');?></a></p>
+            <p><span>©<?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
         </footer>
     </div>
 </body>
