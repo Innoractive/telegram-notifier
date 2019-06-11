@@ -85,7 +85,7 @@ require __DIR__ . '/vendor/autoload.php';
                         <div id="inputs" class="item">
                             <div class="nes-field">
                                 <label for="name_field"><?php echo bot_name(); ?> Email</label>
-                                <button type="button" class="nes-btn is-primary" style="float:right;width:15%">Copy</button>
+                                <button type="button" id="copy-btn" class="nes-btn is-primary" style="float:right;width:15%">Copy</button>
                                 <input type="text" id="telegram-email" class="nes-input" placeholder="543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?>" readonly style="float:left; width: 80%">
                             </div>
                             <div style="clear:both"></div>
