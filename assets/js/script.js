@@ -5,6 +5,11 @@ document.addEventListener('scroll', () => {
   } else {
 	  document.querySelector('header').classList.remove('sticky');
   }
+  if(scrollPos > 500) {
+    $('#fab-btn').addClass('active');
+  } else {
+    $('#fab-btn').removeClass('active');
+  }
 });
 
 function copytext() {

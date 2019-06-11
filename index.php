@@ -103,6 +103,8 @@ require __DIR__ . '/vendor/autoload.php';
         <footer>
             <p><span>©<?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
         </footer>
+
+        <button type="button" class="nes-btn is-error scroll-btn" id="fab-btn" onclick="window.scrollTo({ top:0, behavior: 'smooth' })"><span>&lt;</span></button>
     </div>
 </body>
 </html>
