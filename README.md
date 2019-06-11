@@ -27,6 +27,10 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 ### Setup mailhook
 - forward email to `http://path.to/forward.php`
 
+### Send Email
+- send email to `chat-id@your-domain.com`
+- system will convert email to telegram message
+
 ### Title Label
 - system will auto detect `title label` from `keyword` in email subject / email body
 - if multiple keyword in subject / body, system will use icon with higher priority
@@ -44,4 +48,4 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 |   🧪  |      `test`     |        7 |
 |   ✉️  |    `default`    |        0 |
 
-When no keyword detected, will use default icon
+- When no keyword detected, will use default icon
