@@ -15,6 +15,9 @@ require __DIR__ . '/vendor/autoload.php';
     <link href="<?php echo asset('css/nes.css'); ?>" rel="stylesheet" />
     <link href="<?php echo asset('css/style.css'); ?>" rel="stylesheet" />
     <script src="<?php echo asset('js/app.js'); ?>"></script>
+    <script>
+      var mail_domain = '<?php echo getenv('MAIL_DOMAIN'); ?>';
+    </script>
     <script src="<?php echo asset('js/script.js'); ?>"></script>
 </head>
 <body id="nescss">
@@ -72,7 +75,7 @@ require __DIR__ . '/vendor/autoload.php';
                         <div id="inputs" class="item">
                             <div class="nes-field">
                                 <label for="name_field">Your Chat ID</label>
-                                <input type="text" id="name_field" class="nes-input" placeholder="eg. 543XXXX80">
+                                <input type="text" id="chat-id" class="nes-input" placeholder="eg. 543XXXX80">
                             </div>
                         </div>
                     </section>

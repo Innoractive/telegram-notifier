@@ -6,3 +6,9 @@ document.addEventListener('scroll', () => {
 	  document.querySelector('header').classList.remove('sticky');
   }
 });
+
+$(document).ready(function() {
+  $('#chat-id').keyup(function() {
+    $('#telegram-email').val($(this).val() + mail_domain);
+  });
+});
