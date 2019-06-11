@@ -43,3 +43,5 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 |   ℹ️  |      `info`     |        8 |
 |   🧪  |      `test`     |        7 |
 |   ✉️  |    `default`    |        0 |
+
+When no keyword detected, will use default icon
