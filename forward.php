@@ -9,12 +9,12 @@ if(isset($_POST['recipient'])) {
 
     $telegram = new Longman\TelegramBot\Telegram(getenv('TELEGRAM_API'), getenv('TELEGRAM_BOTNAME'));
 
-    $message = sprintf('<b>Title:</b><br>%s<br><b>Message</b><br>%s', $_POST['subject'], $_POST['stripped-text']);
+    $message = sprintf(file_get_contents('view/telegram-template.html'), getIcon($_POST['subject'] . ' ' . $_POST['stripped-text']), $_POST['subject'], $_POST['stripped-text']);
 
     \Longman\TelegramBot\Request::sendMessage([
         'chat_id' => $to,
         'parse_mode' => 'HTML',
-        'text' => $message,
+        'text' => preg_replace('#<br\s*/?>#i', "\n", $message),
         'disable_web_page_preview' => true,
     ]);
 }
