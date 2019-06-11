@@ -15,16 +15,7 @@ document.addEventListener('scroll', () => {
 function copytext() {
   var email = document.getElementById('telegram-email').value;
   var copyFrom = document.getElementById('copy-textarea');
-  if(!copyFrom) {
-    copyFrom = document.createElement('textarea');
-    copyFrom.id = 'copy-textarea';
-    copyFrom.style = 'position: absolute;left:-1000px;top:-1000px;';
-    copyFrom.innerHTML = email;
-    document.querySelector('body').appendChild(copyFrom);
-  } else {
-    copyFrom.innerHTML = email;
-  }
-
+  copyFrom.innerHTML = email;
   copyFrom.select();
   document.execCommand('copy');
 
@@ -37,6 +28,7 @@ function copytext() {
     $('#email-link').attr('href', 'mailto:' + email);
     $('#last-step').show();
   }
+  $('#chat-id').focus();
 }
 
 $(document).ready(function() {

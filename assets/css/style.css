@@ -352,6 +352,12 @@ img.lazy {
 }
 
 @media screen and (max-width: 650px) {
+  #email-link {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+  }
   #balloons .nes-bcrikko{
     display:none;
   }
@@ -376,4 +382,10 @@ img.lazy {
   .footer-year{
     display:block;
   }
+}
+
+#copy-textarea{
+  position: absolute;
+  left:-1000px;
+  top:-1000px;
 }

@@ -116,5 +116,6 @@ require __DIR__ . '/vendor/autoload.php';
 
         <button type="button" class="nes-btn is-error scroll-btn" id="fab-btn" onclick="window.scrollTo({ top:0, behavior: 'smooth' })"><span>&lt;</span></button>
     </div>
+    <textarea id="copy-textarea"></textarea>
 </body>
 </html>
