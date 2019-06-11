@@ -14,7 +14,7 @@ require __DIR__ . '/vendor/autoload.php';
     <title><?php echo bot_name();?> | Telegram Notifier for Innoractive.com</title>
     <link href="<?php echo asset('css/nes.css'); ?>" rel="stylesheet" />
     <link href="<?php echo asset('css/style.css'); ?>" rel="stylesheet" />
-    <script src="<?php echo asset('js/dialog-polyfill.js'); ?>"></script>
+    <script src="<?php echo asset('js/app.js'); ?>"></script>
     <script src="<?php echo asset('js/script.js'); ?>"></script>
 </head>
 <body id="nescss">
@@ -82,8 +82,10 @@ require __DIR__ . '/vendor/autoload.php';
                         <div id="inputs" class="item">
                             <div class="nes-field">
                                 <label for="name_field"><?php echo bot_name(); ?> Email</label>
-                                <input type="text" id="telegram-email" class="nes-input" placeholder="543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?>" readonly >
+                                <button type="button" class="nes-btn is-primary" style="float:right;width:15%">Copy</button>
+                                <input type="text" id="telegram-email" class="nes-input" placeholder="543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?>" readonly style="float:left; width: 80%">
                             </div>
+                            <div style="clear:both"></div>
                         </div>
                     </section>
                 </section>
