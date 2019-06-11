@@ -39,7 +39,7 @@ require __DIR__ . '/vendor/autoload.php';
             </section>
 
             <section class="topic">
-                <h2 id="installation"><a href="#installation">#</a>How To Use</h2>
+                <h2 id="how-to-use"><a href="#how-to-use">#</a>How To Use</h2>
 
                 <section class="item">
                     <section class="nes-container">
