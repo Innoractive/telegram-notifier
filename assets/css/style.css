@@ -328,6 +328,10 @@ img.lazy {
   }
 }
 
+.show-small{
+  display:none;
+}
+
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
@@ -352,6 +356,10 @@ img.lazy {
 }
 
 @media screen and (max-width: 650px) {
+  .show-small{
+    display:block;
+  }
+
   #email-link {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -382,6 +390,15 @@ img.lazy {
   .footer-year{
     display:block;
   }
+}
+
+#dialog-default {
+  max-width: 600px;
+}
+
+.dialog-menu.is-centered{
+  text-align: center;
+  padding: 0;
 }
 
 #copy-textarea{
