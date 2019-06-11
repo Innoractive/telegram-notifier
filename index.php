@@ -91,6 +91,10 @@ require __DIR__ . '/vendor/autoload.php';
                             <div style="clear:both"></div>
                         </div>
                     </section>
+
+                    <section class="nes-container" id="last-step" style="display:none">
+                        <p>5. Send an email to <a id="email-link" href="mailto:" target="_blank">543XXXX80<?php echo getenv('MAIL_DOMAIN'); ?></a> Now!</p>
+                    </section>
                 </section>
             </section>
         </main>

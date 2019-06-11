@@ -22,6 +22,10 @@ function copytext() {
 
   copyFrom.select();
   document.execCommand('copy');
+
+  $('#email-link').text(text);
+  $('#email-link').attr('href', 'mailto:' + text);
+  $('#last-step').show();
 }
 
 $(document).ready(function() {
