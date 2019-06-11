@@ -93,7 +93,7 @@ require __DIR__ . '/vendor/autoload.php';
                         <div id="inputs" class="item">
                             <div class="nes-field">
                                 <label for="name_field">Your Chat ID</label>
-                                <input type="text" id="chat-id" class="nes-input" placeholder="eg. 543XXXX80">
+                                <input type="number" id="chat-id" class="nes-input" placeholder="eg. 543XXXX80">
                             </div>
                         </div>
                     </section>
