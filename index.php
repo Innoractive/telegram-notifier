@@ -53,6 +53,7 @@ require __DIR__ . '/vendor/autoload.php';
                                 <section class="message -right">
                                     <!-- Balloon -->
                                     <div class="nes-balloon from-right">
+                                        <p>You:</p>
                                         <p>/getChatId </p>
                                     </div>
                                     <i class="nes-bcrikko"></i>
@@ -61,6 +62,7 @@ require __DIR__ . '/vendor/autoload.php';
                                     <i class="nes-bcrikko"></i>
                                     <!-- Balloon -->
                                     <div class="nes-balloon from-left">
+                                        <p><?php echo bot_link(); ?>:</p>
                                         <p>Chat Id: 543XXXX80</p>
                                         <p>User Id: 543XXXX80</p>
                                         <p>Message: /getChatId</p>
