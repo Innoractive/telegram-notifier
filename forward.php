@@ -15,10 +15,14 @@ if(isset($_POST['recipient'])) {
 
     $message = sprintf(file_get_contents('view/telegram-template.html'), getIcon($_POST['subject'] . ' ' . $_POST['stripped-text']), $_POST['subject'], $_POST['stripped-text']);
 
-    \Longman\TelegramBot\Request::sendMessage([
+    $response = \Longman\TelegramBot\Request::sendMessage([
         'chat_id' => $to,
         'parse_mode' => 'HTML',
         'text' => preg_replace('#<br\s*/?>#i', "\n", $message),
         'disable_web_page_preview' => true,
     ]);
+
+    if(!$response->isOk()) {
+        file_put_contents('error.log', sprintf('[%s]: %s' . PHP_EOL, date('Y-m-d H:i:s'), print_r(array($_POST, $response), true)), FILE_APPEND);
+    }
 }
