@@ -26,3 +26,20 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 
 ### Setup mailhook
 - forward email to `http://path.to/forward.php`
+
+### Title Label
+- system will auto detect `title label` from `keyword` in email subject / email body
+- if multiple keyword in subject / body, system will use icon with higher priority
+- eg. following email contain keyword "error" & "info" will use `error` icon instead of `info` icon
+> subject: <br> 
+> error in api.php<br><br>
+> body:<br>
+> info => line 39 undefined class API 
+
+| Icon |    Keyword    | Priority |
+|:----:|:-------------:|---------:|
+|   🚫  |  `error`, `danger` |       10 |
+|   ⚠️  | `alert`, `warning` |        9 |
+|   ℹ️  |      `info`     |        8 |
+|   🧪  |      `test`     |        7 |
+|   ✉️  |    `default`    |        0 |
