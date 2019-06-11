@@ -16,7 +16,7 @@ if(isset($_POST['recipient'])) {
     $message = sprintf(file_get_contents('view/telegram-template.html'),
         getIcon($_POST['subject'] . ' ' . $_POST['stripped-text']),
         $_POST['subject'],
-        preg_replace('#\*{2}(.*?)\*{2}#', '<b>$1</b>', $_POST['stripped-text']),
+        preg_replace('#\*{1}(.*?)\*{1}#', '<b>$1</b>', $_POST['stripped-text']),
         str_replace(['<','>'], '', $_POST['from']));
 
     $response = \Longman\TelegramBot\Request::sendMessage([
