@@ -359,6 +359,9 @@ img.lazy {
   .show-small{
     display:block;
   }
+  section.message-list {
+    overflow: auto;
+  }
 
   #email-link {
     text-overflow: ellipsis;
@@ -373,7 +376,7 @@ img.lazy {
     max-width: 85%;
   }
   .nav-brand h1{
-    font-size: 18px;
+    font-size: 16px;
   }
   #copy-btn{
     width: 30%;
