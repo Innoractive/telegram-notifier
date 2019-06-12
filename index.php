@@ -10,6 +10,8 @@ require __DIR__ . '/vendor/autoload.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#212529"/>
+    <meta name="application-name" content="<?php echo bot_name(); ?>"/>
+    <link rel="shortcut icon" type="image/png" href="<?php echo asset('img/icon.png'); ?>"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
@@ -27,7 +29,7 @@ require __DIR__ . '/vendor/autoload.php';
         <div class="container">
             <div class="nav-brand">
                 <a href="<?php echo bot_url();?>" target="_blank" rel="noopener" title="Link to Telegram">
-                    <h1 class="typewriter"><i class="brand-logo nes-icon star"></i> <?php echo bot_name();?></h1>
+                    <h1 class="typewriter"><img class="brand-logo" src="<?php echo asset('img/icon.png'); ?>" > <?php echo bot_name();?></h1>
                 </a>
                 <p>Telegram Notifier for <a  href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive.com</a></p>
             </div>

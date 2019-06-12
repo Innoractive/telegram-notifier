@@ -41,7 +41,9 @@ header > .container > .social-button {
 
 .nav-brand .brand-logo {
   margin-right: 0;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  image-rendering: pixelated;
+  width: 35px;
 }
 .nav-brand > a {
   color: #212529;
