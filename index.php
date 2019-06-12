@@ -64,7 +64,7 @@ require __DIR__ . '/vendor/autoload.php';
                         <p>1. Add <?php echo bot_link();?> To Your Telegram Group</p>
                     </section>
 
-                    <section class="nes-container with-title">
+                    <section class="nes-container with-title" id="step-2">
                         <h3 class="title">2. Go To Your Telegram Group</h3>
                         <div id="balloons" class="item">
                             <section class="message-list">

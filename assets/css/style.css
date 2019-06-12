@@ -359,8 +359,9 @@ img.lazy {
   .show-small{
     display:block;
   }
-  section.message-list {
-    overflow: auto;
+
+  #step-2{
+    padding: 1.5rem 20px;
   }
 
   #email-link {
