@@ -10,6 +10,8 @@ require __DIR__ . '/vendor/autoload.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#212529"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title><?php echo bot_name();?> | Telegram Notifier for Innoractive.com</title>
     <link href="<?php echo asset('css/nes.css'); ?>" rel="stylesheet" />
