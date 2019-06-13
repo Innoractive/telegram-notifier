@@ -15,6 +15,7 @@ require __DIR__ . '/vendor/autoload.php';
     <link rel="shortcut icon" type="image/png" href="<?php echo asset('img/icon.png'); ?>"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title><?php echo bot_name();?> | Telegram Notifier for Innoractive.com</title>
     <link href="<?php echo asset('css/nes.css'); ?>" rel="stylesheet" />

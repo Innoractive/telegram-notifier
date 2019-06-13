@@ -32,6 +32,15 @@ function copytext() {
 }
 
 $(document).ready(function() {
+  var i = 0;
+  $('.topic .nes-container').hide();
+  $('.topic .nes-container').each(function() {
+    var obj = this;
+    setTimeout(function() {
+      $(obj).not('#last-step,#email-block').show();
+      $(obj).addClass('animated').addClass('slideInLeft');
+    }, ++i * 300);
+  });
   $('#chat-id').click(function() {
     $(this).val('');
     $('#last-step').hide();
