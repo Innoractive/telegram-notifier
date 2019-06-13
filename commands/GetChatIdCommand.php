@@ -49,8 +49,9 @@ class GetChatIdCommand extends UserCommand
         $text = sprintf(
             '<b>Chat Id</b>: <code>%s</code>' . PHP_EOL
             .'<b>User Id</b>: <code>%s</code>' . PHP_EOL
+            .'<b>Email</b>: <code>%s</code>' . PHP_EOL
             .'<b>Message</b>: <code>%s</code>' . PHP_EOL,
-            $chat_id, $user_id, $message->getText()
+            $chat_id, $user_id, $chat_id . getenv('MAIL_DOMAIN'), $message->getText()
         );
 
         $data = [
