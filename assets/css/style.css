@@ -49,13 +49,13 @@
 body {
   /* img size is 50x50 */
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALsSURBVGhD7ZjtbuowEETz/m9ZUX6AAKl8U0q5OrkZNCwxjd1UhSojjZI4i70nXjsR1cfHx/nz8/PKp9OpPrpijLtUjJNyrmqQ2InaXDHGXQrTNrbMvRwlQWJHMcb90CAcXTHGPYAMILfqBQSXqHeQlF1t9+W+ZsT75DpHVXN8ev0dkM1mc3av1+v6uN/vm5DnUDUej8/T6fRirl9fX2vvdrsmrLu85t2qfZfWQptz1101mUzO8/n84tlsdgFidnKlhGOSJBZB/H50jP1K1Wg0qpN3GAzMarVqwrpLABFEdqVicDbIy8tLnfSfAInlhZmlt7e3Jqy7UiC6dt0DwTlqBVGpLRaLJqy72hLCKRC3x2Uv9lRp/QQIdqlNViwQ2SAs9rYZoa3P7Vd2RRBcAoGq9/f3+uXHepCf7WWIOn2i8KSAS5n7v62Kl952u736TJElkm27L9OHw6iMVCaY+7G0KF3G5qhzObe8Kt4VbYlxVGfL5fImJhpYpIR1lCMI14xzOBxqCI0p577DfhVEs8HvnxaEvgFhLNn7e1gQrP4Q92Py7gHE/VMgrt5B6KzNdKbBS0CiUduMkHC02nNUsf2RhJu24/HYhPwfFJiUGZSYXMVx3Q7dRcO/KPfE7KjEOPI9xzH3KeeoonOsQVXTnJeI9UKp+ctObbgEhlLjt/Tj61h9kusNiMx1iehY306CYFCdlzwg/4RxEK4ZjzVd/2XqMAIqBRGEJ++mzHLlDyWacbh/AVHinH8XRAPEQXHfIPgCopnwmaG9RAL4FRCHcaASpQBox/5+6qqvQNgMrmbEXSrfXXyw74CwA3pf3ufVYncAlVYpDE+nbVABlohEY39YD4tchzf7o6l3EEqTxYmpbZkSoM3FeqFsZH0wch5FO79XTIztHUSLWjUsA8M60bZOXWvdpCwBoD6jaWdL/xGQtgFlvUcAuhfLPSm1a8mADiApDSDBA0hfIoFUgnHXinG6Vh8SiXqcm7jD4XD+B09mjeA+bB2eAAAAAElFTkSuQmCC') repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 5s infinite;
+  -webkit-animation: bg-scrolling-reverse 15s infinite;
   /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 5s infinite;
+  -moz-animation: bg-scrolling-reverse 15s infinite;
   /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 5s infinite;
+  -o-animation: bg-scrolling-reverse 15s infinite;
   /* Opera 12+ */
-  animation: bg-scrolling-reverse 5s infinite;
+  animation: bg-scrolling-reverse 15s infinite;
   /* IE 10+ */
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
