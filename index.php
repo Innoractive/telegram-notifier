@@ -11,6 +11,7 @@ require __DIR__ . '/vendor/autoload.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#212529"/>
     <meta name="application-name" content="<?php echo bot_name(); ?>"/>
+    <link rel="icon" sizes="192x192" href="<?php echo asset('img/icon.png'); ?>">
     <link rel="shortcut icon" type="image/png" href="<?php echo asset('img/icon.png'); ?>"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
