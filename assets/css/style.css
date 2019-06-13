@@ -358,6 +358,9 @@ img.lazy {
 }
 
 @media screen and (max-width: 650px) {
+  footer{
+    margin-bottom: 100px;
+  }
   .show-small{
     display:block;
   }

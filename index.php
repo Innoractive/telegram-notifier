@@ -38,24 +38,27 @@ require __DIR__ . '/vendor/autoload.php';
                     <button type="button" class="nes-btn is-warning show-large" onclick="document.getElementById('dialog-default').showModal();">
                         About
                     </button>
-                    <dialog class="nes-dialog is-rounded" id="dialog-default">
-                        <form method="dialog">
-                            <p class="title">About</p>
-                            <p><?php echo bot_link();?> is a TelegramBot to convert your email into telegram message.</p>
-                            <menu class="dialog-menu is-centered">
-                                <button class="nes-btn is-primary" style="width: 150px">OK</button>
-                            </menu>
-                        </form>
-                    </dialog>
                 </section>
             </div>
         </div>
     </header>
     <div class="container">
         <main class="main-content">
+            <dialog class="nes-dialog is-rounded" id="dialog-default">
+                <form method="dialog">
+                    <p class="title">About</p>
+                    <p><?php echo bot_link();?> is a TelegramBot to convert your email into telegram message.</p>
+                    <menu class="dialog-menu is-centered">
+                        <button class="nes-btn is-primary" style="width: 150px">OK</button>
+                    </menu>
+                </form>
+            </dialog>
             <section class="topic show-small">
-                <h2 id="about"><a href="#about">#</a>About</h2>
-                <p><?php echo bot_link();?> is a TelegramBot to convert your email into telegram message.</p>
+                <section class="nes-container is-centered">
+                    <button type="button" class="nes-btn is-warning" onclick="document.getElementById('dialog-default').showModal();">
+                        About
+                    </button>
+                </section>
             </section>
 
             <section class="topic">
