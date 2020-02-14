@@ -56,7 +56,7 @@ class GetChatIdCommand extends UserCommand
         );
 
         $data = [
-            'chat_id' => $chat_id,
+            'chat_id' => str_replace('t', '-', $chat_id),
             'text'    => $text,
             'parse_mode' => 'HTML',
         ];

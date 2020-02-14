@@ -6,6 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 // forward mail to telegram
 if(isset($_POST['recipient'])) {
     list($to, $domail) = explode('@', trim($_POST['recipient'], '<>'));
+    $to = str_replace('t', '-', $to);
 
     $telegram = new Longman\TelegramBot\Telegram(getenv('TELEGRAM_API'), getenv('TELEGRAM_BOTNAME'));
 
