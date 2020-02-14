@@ -56,6 +56,7 @@ class StartCommand extends SystemCommand
         $message = $this->getMessage();
 
         $chat_id = $message->getChat()->getId();
+        $chat_id = str_replace('t', '-', $chat_id);
         $text    = 'Hi there!' . PHP_EOL . 'Type /help to see all commands!';
 
         $data = [

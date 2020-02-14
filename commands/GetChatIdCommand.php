@@ -45,6 +45,7 @@ class GetChatIdCommand extends UserCommand
         $message = $this->getMessage();
         $chat_id = $message->getChat()->getId();
         $user_id = $message->getFrom()->getId();
+        $chat_id = str_replace('-', 't', $chat_id);
 
         $text = sprintf(
             '<b>Chat Id</b>: <code>%s</code>' . PHP_EOL

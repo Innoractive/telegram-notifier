@@ -29,6 +29,7 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 
 ### Send Email
 - send email to `chat-id@your-domain.com`
+- chat-id with negative symbol "-" will replace with character "t"
 - system will convert email to telegram message
 
 ### Title Label
