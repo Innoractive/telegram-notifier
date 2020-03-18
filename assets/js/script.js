@@ -47,7 +47,7 @@ $(document).ready(function() {
     $(this).keyup();
   });
   $('#chat-id').keyup(function() {
-    if($(this).val() != '') {
+    if($(this).val() != '' && /^[-t]{0,1}[0-9]+$/.test($(this).val())) {
       $('#chat-id').removeClass('is-error');
       $('#telegram-email').val($(this).val().replace(/-/, "t") + mail_domain);
       $('#email-block').show();

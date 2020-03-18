@@ -24,7 +24,7 @@ require __DIR__ . '/vendor/autoload.php';
     <script>
       var mail_domain = '<?php echo getenv('MAIL_DOMAIN'); ?>';
     </script>
-    <script src="<?php echo asset('js/script.js?v=1'); ?>"></script>
+    <script src="<?php echo asset('js/script.js?v=2'); ?>"></script>
 </head>
 <body id="nescss">
     <header>
@@ -105,7 +105,7 @@ require __DIR__ . '/vendor/autoload.php';
                             <div class="nes-field">
                                 <label for="name_field">Your Chat ID</label>
                                 <form action="#" onsubmit="return false">
-                                    <input type="text" id="chat-id" class="nes-input" pattern="^[t]{0,1}[0-9]+$" placeholder="eg. 543XXXX80" title="Chat ID format, eg, t1234567 or 654321">
+                                    <input type="text" id="chat-id" class="nes-input" pattern="^[-t]{0,1}[0-9]+$" placeholder="eg. 543XXXX80" title="Chat ID format, eg, t1234567 or 654321">
                                 </form>
                             </div>
                         </div>
