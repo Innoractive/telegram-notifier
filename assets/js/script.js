@@ -49,7 +49,7 @@ $(document).ready(function() {
   $('#chat-id').keyup(function() {
     if($(this).val() != '') {
       $('#chat-id').removeClass('is-error');
-      $('#telegram-email').val($(this).val() + mail_domain);
+      $('#telegram-email').val($(this).val().replace(/-/, "t") + mail_domain);
       $('#email-block').show();
     } else {
       $('#telegram-email').val('');
