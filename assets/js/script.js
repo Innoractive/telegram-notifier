@@ -42,15 +42,25 @@ $(document).ready(function() {
     }, ++i * 300);
   });
   $('#chat-id').click(function() {
+    $('#chat-id').removeClass('is-error');
     $(this).val('');
     $('#last-step').hide();
     $(this).keyup();
   });
   $('#chat-id').keyup(function() {
-    if($(this).val() != '' && /^[-t]{0,1}[0-9]+$/.test($(this).val())) {
-      $('#chat-id').removeClass('is-error');
-      $('#telegram-email').val($(this).val().replace(/-/, "t") + mail_domain);
-      $('#email-block').show();
+    if($(this).val() != '') {
+      if(/^[-t]{0,1}[0-9]+$/.test($(this).val())) {
+        $('#chat-id').removeClass('is-error');
+        setTimeout(function () {
+          $('#chat-id').removeClass('is-error');
+        }, 2000);
+        $('#telegram-email').val($(this).val().replace(/-/, "t") + mail_domain);
+        $('#email-block').show();
+      } else {
+        setTimeout(function () {
+          $('#chat-id').addClass('is-error');
+        }, 1000);
+      }
     } else {
       $('#telegram-email').val('');
       $('#email-block').hide();
