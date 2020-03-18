@@ -43,10 +43,11 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 
 | Icon |    Keyword    | Priority |
 |:----:|:-------------:|---------:|
-|   🚫  |  `error`, `danger` |       10 |
-|   ⚠️  | `alert`, `warning` |        9 |
+|   🚫  |  `error`, `danger`, `failed` |       10 |
+|   ⚠️  |  `warning` |        9 |
 |   ℹ️  |      `info`     |        8 |
-|   🧪  |      `test`     |        7 |
+|   ✅  |     `success`, `succeeded`, `passed`     |        7 |
+|   🧪  |      `test`     |        6 |
 |   ✉️  |    `default`    |        0 |
 
 - When no keyword detected, will use default icon

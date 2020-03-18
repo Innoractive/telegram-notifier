@@ -1,16 +1,22 @@
 <?php
 
 function getIcon($content) {
-    if(contains($content, ['error', 'danger']) !== false) {
+    $content = strtolower($content);
+
+    if(contains($content, ['error', 'danger', 'failed']) !== false) {
         return '🚫';
     }
 
-    if(contains($content, ['alert','warning']) !== false) {
+    if(contains($content, ['warning']) !== false) {
         return '⚠️';
     }
 
     if(contains($content, ['info']) !== false) {
         return 'ℹ️';
+    }
+
+    if(contains($content, ['success', 'succeeded', 'passed']) !== false) {
+        return '✅';
     }
 
     if(contains($content, ['test']) !== false) {
