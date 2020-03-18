@@ -24,7 +24,7 @@ require __DIR__ . '/vendor/autoload.php';
     <script>
       var mail_domain = '<?php echo getenv('MAIL_DOMAIN'); ?>';
     </script>
-    <script src="<?php echo asset('js/script.js?v=3'); ?>"></script>
+    <script src="<?php echo asset('js/script.js?v=5'); ?>"></script>
 </head>
 <body id="nescss">
     <header>

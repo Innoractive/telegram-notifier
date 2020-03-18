@@ -53,13 +53,14 @@ $(document).ready(function() {
         $('#chat-id').removeClass('is-error');
         setTimeout(function () {
           $('#chat-id').removeClass('is-error');
-        }, 2000);
+        }, 1000);
         $('#telegram-email').val($(this).val().replace(/-/, "t") + mail_domain);
         $('#email-block').show();
       } else {
         setTimeout(function () {
           $('#chat-id').addClass('is-error');
         }, 1000);
+        $('#email-block').hide();
       }
     } else {
       $('#telegram-email').val('');
