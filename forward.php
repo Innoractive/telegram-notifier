@@ -13,12 +13,14 @@ if(isset($_POST['recipient'])) {
     if(getenv('DEBUG') == true) {
         file_put_contents('debug.log', print_r($_POST, true), FILE_APPEND);
     }
+    $type = getChannelType($_POST['subject'] . ' ' . $_POST['stripped-text']);
 
     $message = sprintf(file_get_contents('view/telegram-template.html'),
-        getIcon($_POST['subject'] . ' ' . $_POST['stripped-text']),
+        getIcon($type),
         $_POST['subject'],
         $_POST['stripped-text'],
-        remove_arrow($_POST['from']));
+        remove_arrow($_POST['from']),
+        $type);
 
     $response = \Longman\TelegramBot\Request::sendMessage([
         'chat_id' => $to,
