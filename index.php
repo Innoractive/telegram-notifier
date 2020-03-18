@@ -88,8 +88,10 @@ require __DIR__ . '/vendor/autoload.php';
                                     <!-- Balloon -->
                                     <div class="nes-balloon from-left">
                                         <p><?php echo bot_link(); ?>:</p>
+                                        <p>Chat Id: t4XXX8</p>
                                         <p>Chat Id: 543XXXX80</p>
-                                        <p>User Id: 543XXXX80</p>
+                                        <p>Email &nbsp;:<br>
+                                            &nbsp; t4XXX8@notty.innoractive.com</p>
                                         <p>Message: /getChatId</p>
                                     </div>
                                 </section>
