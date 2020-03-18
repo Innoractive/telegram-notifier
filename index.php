@@ -140,7 +140,7 @@ require __DIR__ . '/vendor/autoload.php';
             </section>
         </main>
         <footer>
-            <p><span class="footer-year">© <?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
+            <p><span class="footer-year">© 2019 - <?php echo date('Y'); ?></span> <a href="https://www.innoractive.com/" target="_blank" rel="noopener">Innoractive Sdn Bhd</a> <span>-</span> <?php echo bot_link(); ?></p>
         </footer>
 
         <button type="button" class="nes-btn is-error scroll-btn" id="fab-btn" onclick="window.scrollTo({ top:0, behavior: 'smooth' })"><span>&lt;</span></button>
