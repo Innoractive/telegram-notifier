@@ -10,12 +10,12 @@ function getChannelType($content) {
         return 'Warning';
     }
 
-    if(contains($content, ['info']) !== false) {
-        return 'Information';
-    }
-
     if(contains($content, ['success', 'succeeded', 'passed']) !== false) {
         return 'Success';
+    }
+
+    if(contains($content, ['info', 'recovered']) !== false) {
+        return 'Information';
     }
 
     if(contains($content, ['test']) !== false) {
