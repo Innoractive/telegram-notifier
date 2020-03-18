@@ -104,7 +104,9 @@ require __DIR__ . '/vendor/autoload.php';
                         <div id="inputs" class="item">
                             <div class="nes-field">
                                 <label for="name_field">Your Chat ID</label>
-                                <input type="number" id="chat-id" class="nes-input" placeholder="eg. 543XXXX80">
+                                <form action="#" onsubmit="return false">
+                                    <input type="text" id="chat-id" class="nes-input" pattern="^[t]{0,1}[0-9]+$" placeholder="eg. 543XXXX80" title="Chat ID format, eg, t1234567 or 654321">
+                                </form>
                             </div>
                         </div>
                     </section>
