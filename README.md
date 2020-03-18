@@ -44,7 +44,7 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 | Icon |    Keyword    | Priority |
 |:----:|:-------------:|---------:|
 |   🚫  |  `error`, `danger`, `failed` |       10 |
-|   ⚠️  |  `warning` |        9 |
+|   ⚠️  |  `warning`, `unexpected` |        9 |
 |   ℹ️  |      `info`     |        8 |
 |   ✅  |     `success`, `succeeded`, `passed`     |        7 |
 |   🧪  |      `test`     |        6 |

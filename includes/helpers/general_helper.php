@@ -6,7 +6,7 @@ function getChannelType($content) {
         return 'Error';
     }
 
-    if(contains($content, ['warning']) !== false) {
+    if(contains($content, ['warning', 'unexpected']) !== false) {
         return 'Warning';
     }
 
