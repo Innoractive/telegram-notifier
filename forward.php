@@ -15,6 +15,10 @@ if(isset($_POST['recipient'])) {
     }
     $type = getChannelType($_POST['subject'] . ' ' . $_POST['stripped-text']);
 
+    // trim whitespace in first char
+    $_POST['stripped-text'] = preg_replace("/[\t ]+/", ' ', $_POST['stripped-text']);
+    $_POST['stripped-text'] = preg_replace("/[\n ]+", "\n", $_POST['stripped-text']);
+
     $message = sprintf(file_get_contents('view/telegram-template.html'),
         getIcon($type),
         $_POST['subject'],
