@@ -17,8 +17,8 @@ if(isset($_POST['recipient'])) {
 
     // trim whitespace in first char
     $_POST['stripped-text'] = str_replace("Your faithful employee,", "", $_POST['stripped-text']);
-    $_POST['stripped-text'] = preg_replace("/[\n\r]+/", "\n", $_POST['stripped-text']);
-    $_POST['stripped-text'] = preg_replace("/[\n]+[\n\t ]*[\t ]/", "\n", $_POST['stripped-text']);
+    $_POST['stripped-text'] = preg_replace("/[\r][\n]/", "\n", $_POST['stripped-text']);
+    $_POST['stripped-text'] = preg_replace("/[\n][\t ]*[\t ]/", "\n", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\n\r\t ]+$/", "", $_POST['stripped-text']);
 
     $message = sprintf(file_get_contents('view/telegram-template.html'),
