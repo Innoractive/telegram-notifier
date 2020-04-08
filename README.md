@@ -41,13 +41,14 @@ composer create-project innoractive/telegram-notifier --repository "{\"type\":\"
 > body:<br>
 > info => line 39 undefined class API 
 
-| Icon |    Keyword    | Priority |
-|:----:|:-------------:|---------:|
-|   🚫  |  `error`, `danger`, `failed` |       10 |
-|   ⚠️  |  `warning`, `unexpected` |        9 |
-|   ✅  |     `success`, `succeeded`, `passed`     |        8 |
-|   ℹ️  |      `info`, `recovered`     |        7 |
-|   🧪  |      `test`     |        6 |
-|   ✉️  |    `default`    |        0 |
+
+|   Icon   |               Keyword               | Priority |
+|:--------:|:-----------------------------------:|---------:|
+|    🚫    |     `error`, `danger`, `failed`     |       10 |
+|   ⚠️  |        `warning`, `unexpected`      |        9 |
+|    ✅    |  `success`, `succeeded`, `passed`   |        8 |
+|   ℹ️  |          `info`, `recovered`        |        7 |
+|   🧪    |               `test`                |        6 |
+|   ✉️ |              `default`              |        0 |
 
 - When no keyword detected, will use default icon
