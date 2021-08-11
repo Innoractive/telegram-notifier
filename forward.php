@@ -36,11 +36,24 @@ if(isset($_POST['recipient'])) {
     ]);
 
     if(!$response->isOk()) {
-        if($_SERVER['SERVER_NAME'] == 'localhost'){
-            echo 'error!';
-            echo '<br>'.$message;
+        $data = $response->getRawData();
+        if(@$data['parameters'] && @$data['parameters']['migrate_to_chat_id']) {
+
+            $response = \Longman\TelegramBot\Request::sendMessage([
+                'chat_id' => $data['parameters']['migrate_to_chat_id'],
+                'parse_mode' => 'HTML',
+                'text' => preg_replace('#<br\s*/?>#i', "\n", $message),
+                'disable_web_page_preview' => true,
+            ]);
+            file_put_contents('error.log', sprintf('[%s]: %s' . PHP_EOL, date('Y-m-d H:i:s'), 'Resend to chat id(' . $to . '): ' . $data['parameters']['migrate_to_chat_id']), FILE_APPEND);
         }
-        file_put_contents('error.log', sprintf('[%s]: %s' . PHP_EOL, date('Y-m-d H:i:s'), print_r(array($_POST, $response), true)), FILE_APPEND);
+        if(!$response->isOk()) {
+            if($_SERVER['SERVER_NAME'] == 'localhost'){
+                echo 'error!';
+                echo '<br>'.$message;
+            }
+            file_put_contents('error.log', sprintf('[%s]: %s' . PHP_EOL, date('Y-m-d H:i:s'), print_r(array($_POST, $response), true)), FILE_APPEND);
+        }
     }
 
     if(getenv('DEFAULT_CHAT') && getenv('DEFAULT_CHAT_ID')) {
