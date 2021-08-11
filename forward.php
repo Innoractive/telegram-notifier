@@ -20,6 +20,7 @@ if(isset($_POST['recipient'])) {
     $_POST['stripped-text'] = preg_replace("/[\r][\n]/", "\n", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\n][\t ]*[\t ]/", "\n", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\n\r\t ]+$/", "", $_POST['stripped-text']);
+    $_POST['stripped-text'] = preg_replace('/<(\/*(?!b|i|strong|em|u|ins|s|strike|del|code|pre|a|a [^>]+|\/)[^>]*)>/','&lt;$1&gt;', $_POST['stripped-text']);
 
     $message = sprintf(file_get_contents('view/telegram-template.html'),
         getIcon($type),
