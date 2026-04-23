@@ -61,13 +61,16 @@ if(isset($_POST['recipient'])) {
     }
 
     if(getenv('DEFAULT_CHAT') && getenv('DEFAULT_CHAT_ID')) {
-        $response = \Longman\TelegramBot\Request::sendMessage([
-            'chat_id' => getenv('DEFAULT_CHAT_ID'),
-            'parse_mode' => 'HTML',
-            'text' => preg_replace('#<br\s*/?>#i', "\n",
-                sprintf('<b>To Chat:</b> <code>%s</code><br>', $to).
-                $message),
-            'disable_web_page_preview' => true,
-        ]);
+        $excludedChannelIds = explode(',', getenv('DEFAULT_CHAT_EXCLUDED_CHANNEL'));
+        if(!in_array($to, $excludedChannelIds)) {
+            $response = \Longman\TelegramBot\Request::sendMessage([
+                'chat_id' => getenv('DEFAULT_CHAT_ID'),
+                'parse_mode' => 'HTML',
+                'text' => preg_replace('#<br\s*/?>#i', "\n",
+                    sprintf('<b>To Chat:</b> <code>%s</code><br>', $to) .
+                    $message),
+                'disable_web_page_preview' => true,
+            ]);
+        }
     }
 }
