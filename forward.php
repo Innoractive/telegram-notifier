@@ -17,6 +17,9 @@ if(isset($_POST['recipient'])) {
 
     // trim whitespace in first char
     $_POST['stripped-text'] = str_replace("Your faithful employee,", "", $_POST['stripped-text']);
+    $_POST['stripped-text'] = str_replace("This message has been analyzed by Deep Discovery Email Inspector", "🛡️Scanned by Deep Discovery", $_POST['stripped-text']);
+    $_POST['stripped-text'] = str_replace("This message has been analyzed by ", "🛡️Scanned by ", $_POST['stripped-text']);
+    $_POST['stripped-text'] = preg_replace("/[\n\r]{1}[=]+[\n\r]{1}/", "\n", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\r][\n]/", "\n", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\n][\t ]*[\t ]/", "\n", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\n\r\t ]+$/", "", $_POST['stripped-text']);
