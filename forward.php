@@ -14,6 +14,7 @@ if(isset($_POST['recipient'])) {
         file_put_contents('debug.log', print_r($_POST, true), FILE_APPEND);
     }
     $type = getChannelType($_POST['subject'] . ' ' . $_POST['stripped-text']);
+    $_POST['subject']  = str_replace('monit alert --  ', '', $_POST['subject']);
 
     // trim whitespace in first char
     $_POST['stripped-text'] = str_replace("Your faithful employee,", "", $_POST['stripped-text']);
@@ -24,6 +25,7 @@ if(isset($_POST['recipient'])) {
     $_POST['stripped-text'] = preg_replace("/[\n][\t ]*[\t ]/", "\n", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\n\r\t ]+$/", "", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace("/[\n]{3,}/", "\n\n", $_POST['stripped-text']);
+    $_POST['stripped-text'] = preg_replace("/\nMonit\n/", "", $_POST['stripped-text']);
     $_POST['stripped-text'] = preg_replace('/<(\/*(?!b|i|strong|em|u|ins|s|strike|del|code|pre|a|a [^>]+|\/)[^>]*)>/','&lt;$1&gt;', $_POST['stripped-text']);
 
     $message = sprintf(file_get_contents('view/telegram-template.html'),
